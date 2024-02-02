@@ -38,7 +38,7 @@ defmodule Moon.MixProject do
   #
   # Type `mix help compile.app` for more information.
   def application do
-
+    [{:mod, {Moon, []}}]
   end
 
   defp package do
