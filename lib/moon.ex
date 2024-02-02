@@ -1,14 +1,5 @@
 defmodule Moon do
   @moduledoc false
-  use Application
-
-  def start(_type, _args) do
-    # Your startup code here
-    IO.puts("Moon application started.")
-    # Other initialization steps if needed
-
-    :ok
-  end
 
   @colors [
     "krillin-10",
