@@ -34,14 +34,6 @@ defmodule Moon.MixProject do
     ]
   end
 
-  # Configuration for the OTP application.
-  #
-  # Type `mix help compile.app` for more information.
-  def application do
-    ((Code.ensure_compiled(MoonWeb.Application) && [{:mod, {MoonWeb.Application, []}}]) || []) ++
-      [extra_applications: [:logger, :runtime_tools]]
-  end
-
   defp package do
     [
       licenses: ["MIT"],
@@ -78,17 +70,13 @@ defmodule Moon.MixProject do
       {:phoenix_live_dashboard, ">= 0.7.0"},
       {:phoenix_ecto, "~> 4.0"},
       {:ecto_sql, "~> 3.1"},
-      {:faker, "~> 0.17"},
       {:gettext, "~> 0.21"},
       {:jason, "~> 1.0"},
-      {:plug_cowboy, "~> 2.0"},
       {:vega_lite, "~> 0.1.0"},
       {:surface, "> 0.9.1"},
-      {:timex, "~> 3.6"},
-      {:distillery, "~> 2.1"},
-      {:moon_icons, "~> 0.1"},
       {:esbuild, "~> 0.7", runtime: Mix.env() == :dev},
       {:tails, "~> 0.1.7"},
+      {:moon_icons, "~> 0.1"},
 
       # test
       {:excoveralls, "~> 0.10", only: :test},
