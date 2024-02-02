@@ -37,9 +37,12 @@ defmodule Moon.MixProject do
   # Configuration for the OTP application.
   #
   # Type `mix help compile.app` for more information.
-  # def application do
-  #   [{:mod, {Moon, []}}]
-  # end
+  def application do
+    [
+      mod: {Moon.Application, []},
+      extra_applications: [:logger, :runtime_tools]
+    ]
+  end
 
   defp package do
     [
